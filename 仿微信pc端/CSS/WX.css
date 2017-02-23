@@ -1,0 +1,424 @@
+/*清除默认样式*/
+body{
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+input{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #565656;
+}
+img{
+	vertical-align: top;
+	border: none;
+}
+#page{
+	width: 850px;
+	height: 590px;
+	border: 1px solid #dadada;
+	position: absolute;
+	left: 258px;
+	top: 36px;
+}
+.maskB{
+	border: 2px solid #000000;
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 10;
+}
+/*左边部分*/
+.navBox{
+	height: 100%;
+	width: 50px;
+	padding: 5px;
+	box-sizing: border-box;
+	background: #3e3e40;
+	float: left;
+	position: relative;
+}
+.pageNav{
+	height: 100%;
+	padding: 7px;
+}
+.pageNav li{
+	width: 26px;
+	height: 26px;
+	margin-bottom:18px ;
+	cursor: pointer;
+}
+.pageNav .talk{
+	background: url(../img/ico.png) no-repeat -34px -36px;
+}
+.pageNav .address{
+	background: url(../img/ico.png) no-repeat -69px 0;
+}
+.pageNav .collect{
+	background: url(../img/ico.png) no-repeat 0 -36px;
+}
+/*按下时颜色发生变化*/
+.pageNav .act_talk{
+	background: url(../img/ico.png) no-repeat -34px 0;
+}
+.pageNav .act_address{
+	background: url(../img/ico.png) no-repeat -69px -36px;
+}
+.pageNav .act_collect{
+	background: url(../img/ico.png) no-repeat 0 -70px;
+}
+
+.pageNav .set{
+	margin-bottom:0;
+	position: absolute;
+	bottom: 15px;
+	left: 12px;
+	background: url(../img/ico.png) no-repeat 0 0;
+}
+.pageContent{
+	height: 100%;
+	/*width: 800px;*/
+	float: left;
+}
+[v-cloak] {
+  display: none;
+}
+.con_nav{
+	height: 100%;
+	width: 249px;
+	background: #eaeaea;
+	border-left: 1px solid #e0e0e0;
+	float: left;
+}
+/*中间部分*/
+.seek_box{
+	width: 100%;
+	height: 50px;
+	padding: 16px 0 0 12px;
+	box-sizing: border-box;
+}
+.seek{
+	width: 204px;
+	height: 21px;
+	outline: 0;
+	border: 1px solid #dbdbdb;
+	float: left;
+	background: #efefef;
+}
+.btn{
+	float: left;
+	width: 12px;
+	height: 11px;
+	background: url(../img/find.png);
+	margin-left: -20px;
+	margin-top: 7px;
+}
+.talk_list{
+	height: 540px;
+	overflow: hidden;
+	position: relative;
+}
+.talk_list li{
+	padding: 12px;
+	overflow: hidden;
+}
+/*鼠标移入变色*/
+.con_nav .hover{
+	background: #e2e4e6;
+}
+/*点击变色*/
+.con_nav .active{
+	background: #cacdd4;
+}
+.talk_list img{
+	float: left;
+	width: 40px;
+	height: 40px;
+}
+.talk_list .friend{
+	float: left;
+	padding: 2px 0 2px 10px;
+}
+.friend .name{
+	font: 12px/18px "微软雅黑";
+	color: #060002;
+}
+.friend .info{
+	font: 10px/18px "微软雅黑";
+	color: #8a838a;
+}
+.friendList .name,.seekList .name{
+	float: left;
+	padding: 2px 0 2px 10px;
+	font: 14px/32px "微软雅黑";
+	color: #060002;
+}
+.friendList{
+	width: 100%;
+	position: absolute;
+	display: none;
+}
+/*展示区域*/
+.con_show{
+	height: 100%;
+	width: 550px;
+	background: #f5f5f5 url(../img/bg.png) no-repeat center;
+	float: left;
+	position: relative;
+}
+.friend_show{
+	background: #f5f5f5;
+	width: 244px;
+	height: 355px;
+	position: absolute;
+	top: 130px;
+	left:153px ;
+	display: none;
+}
+.friend_show img{
+	width: 120px;
+	height: 120px;
+	margin: 20px 62px;
+}
+.friend_show .friend_name{
+	text-align: center;
+	font: 24px/32px "微软雅黑";
+}
+.friend_show .send_massage{
+	width: 168px;
+	height: 37px;
+	margin:20px 40px;
+	background: #35c736;
+	text-align: center;
+	font: 14px/38px "微软雅黑";
+	color: #fff;
+	cursor: pointer;
+}
+.massage_show{
+	height: 100%;
+	display: none;
+}
+.show_top{
+	width: 100%;
+	height: 28px;
+	text-align: center;
+	font:12px/28px "微软雅黑" ;
+	padding-top: 7px;
+	padding-bottom:5px ;
+	margin-top: 5px;
+	color: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.c_bnt{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.c_bnt a{
+	font: 16px/16px "微软雅黑";
+	float: left;
+	padding: 18px 11px;
+}
+.c_bnt a:hover{
+	background: #dfdfdf;
+}
+.c_bnt .close{
+	padding-right: 15px;
+}
+.c_bnt .close:hover{
+	background: #e74450;
+}
+.show_top a:nth-of-type(2){
+	display: inline-block;
+	width: 10px;
+	height: 7px;
+	background: url(../img/ico.png) no-repeat -62px -77px;
+	margin-left: 6px;
+}
+.con_show .show_top .act_a{
+	background: url(../img/ico.png) no-repeat -41px -77px;
+}
+.show_talk{
+	width: 100%;
+	height: 405px;
+	overflow:hidden;
+	background: #f5f5f5;
+	position: absolute;
+	left: 0;
+	top: 40px;
+}
+/*滚轮样式*/
+.scroll{
+	width: 5px;
+	background: #d2d2d2;
+	position: absolute;
+	right:2px ;
+	bottom: 0;
+	z-index: 10;
+	display: none;
+}
+/*对话框列表*/
+.talk_info{
+	width: 100%;
+	min-height: 406px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 8;
+}
+.talk_info li:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.talk_info li{
+	height: 40px;
+	padding-top: 10px;
+	width: 100%;
+}
+.talk_info img{
+	float: left;
+	width: 34px;
+	height: 34px;
+	margin:0 9px 0 18px;
+}
+.talk_info span{
+	float: left;
+	padding:10px;
+	background: #fff;
+	font: 12px/20px "微软雅黑";
+	max-width: 357px;
+	border-radius:2px ;
+	position: relative;
+}
+.talk_info i{
+	position: absolute;
+	width: 4px;
+	height: 9px;
+	background: url(../img/ico.png) no-repeat -90px -77px;
+	top: 13px;
+}
+.talk_info .user_massage img{
+	float: right;
+	margin:0 18px 0 9px;
+}
+.talk_info .user_massage span{
+	float: right;
+	background: #9eea6a;
+}
+.talk_info .friend_massage i{
+	left: -4px;
+}
+.talk_info .user_massage i{
+	background: url(../img/ico.png) no-repeat -80px -77px;
+	right: -4px;
+}
+/*输入框部分*/
+.show_text{
+	width: 100%;
+	height: 144px;
+	background: #fff;
+	padding-left:16px;
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.tool{
+	width: 100%;
+	height: 40px;
+	background: url(../img/tool_bg.png) no-repeat 0 14px;
+}
+.tool a{
+	float: left;
+	width: 18px;
+	height: 17px;
+	margin: 14px 13px 0 0;
+}
+.tool span{
+	float: left;
+	width: 18px;
+	height: 17px;
+	margin: 14px 13px 0 0;
+	cursor: pointer;
+	position: relative;
+}
+.tool input{
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	cursor: pointer;
+}
+.tool a:nth-of-type(4){
+	margin-left:7px;
+}
+.text{
+	width: 100%;
+	height: 100px;
+	font-size: 12px;
+	overflow: auto;
+	border: none;
+	outline: 0;
+	resize: none;
+	box-sizing: border-box;
+}
+.send{
+	width: 66px;
+	height: 24px;
+	text-align: center;
+	font: 12px/24px "微软雅黑";
+	color: #606060;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+.send:hover{
+	color: #fff;
+	background-color: #3dce3d;
+	
+}
+/*弹窗*/
+.tanBox{
+	background: #fff;
+	font: 12px/33px "微软雅黑";
+	border: 1px solid #c4c4c4;
+	border-radius: 2px;
+	position: absolute;
+	z-index: 10;
+}
+.tanBox li{
+	padding: 0 20px;
+	cursor: pointer;
+	position: relative;
+}
+.tanBox li:hover{
+	background: #e2e2e2;
+}
+.tanBox .faceList{
+	width: 432px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+.faceList img{
+	width: 28px;
+	height: 28px;
+	float: left;
+}

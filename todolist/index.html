@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>todos</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <section class="todoapp" v-cloak>
+        <div>
+            <header class="header" >
+                <h1>todos</h1>
+                <input class="new-todo" placeholder="请输入内容" v-model="todoValue" @keyup.13="addTodo">
+            </header>
+            <section class="main">
+                <input class="toggle-all" type="checkbox" v-model="checkedAll">
+                <ul class="todo-list">                      <!--根据是否被编辑添加class-->
+                    <li :class="{completed:item.isSelected,editing:editingId === item.id}" 
+                    	:index="index"
+                    	v-for="item,index in filterList"
+                	>
+                        <div class="view">
+                            <input class="toggle" type="checkbox" v-model="item.isSelected">
+                            <label @dblclick="editTodo(item,index)">{{item.title}}</label>
+                            <button class="destroy" @click="deleTodo(item.id)"></button>
+                        </div>
+                        <input 
+                        	class="edit"
+                        	v-model="item.title"
+                        	:ref="'editInput'+index" 
+                        	@keyup.13="editDone(item)"
+                        	@blur="editDone(item)"
+                        	@keyup.esc="editCancel(item)"
+                    	/>
+                    </li>
+                </ul>
+            </section>
+            <footer class="footer">
+	            <span class="todo-count">
+	            	<strong>{{unSelectedLen}}</strong>
+	            	<span>条未选中</span>
+	            </span>
+	             <ul class="filters">
+                    <li><a href="#/all" >All</a></li> 
+                    <li><a href="#/active" >Active</a></li> 
+                    <li><a href="#/completed" >Completed</a></li>
+                </ul>
+                <button class="clear-completed" @click="removeTodos">
+                    Clear completed
+                </button>
+            </footer>
+        </div>
+    </section>
+    <script src="vue.js"></script>
+    <script>
+//  	var Data=[
+//  		{
+//  			title:"Html布局",
+//  			id:1,
+//  			isSelected:false,  //判断是否被选中的状态
+//  			editingId:""   //记录要比编辑的数据的id （用来知道是谁被编辑了）
+//  		},
+//  		{
+//  			title:"CSS 样式",
+//  			id:2,
+//  			isSelected:false,
+//  			editingId:""
+//  		}
+//  	]
+      	 // 把数据存到local storage
+    	let storage={
+    		save(key,value){
+    			//设置localStorage  字符串转化为jsonp对象格式
+    			localStorage.setItem(key,JSON.stringify(value))
+    		},
+    		fetch(key){
+      			// 从localStorage中取值 
+    			return JSON.parse(localStorage.getItem(key)) || [];
+    		}
+    	}
+    	// 从localStorage中获取数据
+    	let Data = storage.fetch("todo");
+    	var vm = new Vue({
+    		el:".todoapp",
+    		data:{
+    			list:Data,
+    			todoValue:"",
+    			isSelected:false,
+    			editingId:"" ,
+    			beforeTilte:"",// 记录编辑之前的title值
+    			hash:"all" // 初始值是全部显示
+    			
+    		},
+    		watch:{  // Vue提供监测数据变化的方法
+    			list:{ //要检测的数据呢
+    				handler:function(){  //数据发生变化时执行的函数
+    					storage.save("todo",this.list)
+    				},
+    				deep:true  //是否深度检测
+    			}
+    		},
+    		methods:{
+    			addTodo(){  //添加
+    				if(this.todoValue===""){
+    					return
+    				}
+    				this.list.push({
+    					title:this.todoValue, //Vue中的this指向根实例
+    					id:Math.random(),
+    					isSelected:false
+    				})
+    				this.todoValue=""
+    			},
+    			deleTodo(id){   //删除
+    				this.list=this.list.filter((item)=>item.id!==id)
+    			},
+    			editTodo(todo,index){   // 开始编辑
+					this.beforeTilte = todo.title; //记录一下正编辑的信息的title
+    				this.editingId = todo.id;  //改变数据 
+    				this.$nextTick(function(){    //Vue提供的数据加载完成后会触发的函数
+    					// 可在这里获取document元素进行操作
+    					this.$refs["editInput"+index][0].focus();
+//  				    ref	属性方法，相当于id 所以具有唯一性，可用于获取元素
+    				}) 
+    			},
+    			editDone(todo){  //编辑结束
+    				if(todo.title.trim()===""){  //如果输入内容为空  则删除
+    					this.deleTodo(todo.id)
+    				}
+    				// v-modle检测了value的变化 自动更新
+    				this.editingId = "";
+    			},
+    			editCancel(todo){  //撤销编辑  返回原来的值
+    				todo.title = this.beforeTilte;
+    				this.beforTilte = "";
+    				this.editingId = "";
+    			},
+    			removeTodos:function(){  //删除所有被选中的
+					this.list =this.list.filter((item)=>!item.isSelected)
+				}
+    		},
+    		computed:{  //计算属性  
+    			checkedAll:{
+    				get(){  //取值  全部选中时  checkedAll 为true
+    					return  this.list.filter(item=>item.isSelected).length===this.list.length
+	    			},
+	    			set(value){  //设置  checkedAll改变时，每项的isSelected改变
+	    				this.list.forEach(item=>{item.isSelected=value})
+	    			}
+    			},
+    			unSelectedLen:function(){  //没有被选中的数据的长度
+    				return  this.list.filter( (item)=>!item.isSelected ).length	
+    			},
+    			filterList:function(){  //过滤数据
+    				var list=[] //定义空数组存储按照条件过滤的数据
+    				if(this.hash==="active"){
+    					list = this.list.filter((item)=>!item.isSelected)
+    				}else if(this.hash==="completed"){
+    					list = this.list.filter((item)=>item.isSelected)
+    				}else{
+    					list=this.list
+    				}
+    				return list;
+    			}
+    		}
+    	})
+    	// hash 值改变时 获取到 hash值得最后一个单词
+    	window.onhashchange = function (){
+			let hash = 	window.location.hash.slice(2);
+			// 把获取的值挂到 Vue实例上
+			vm.hash = hash;
+		}
+		window.onhashchange();
+    </script>
+</body>
+</html>

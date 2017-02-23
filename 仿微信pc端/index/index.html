@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../CSS/WX.css" />
+	</head>
+	<body>
+		<section id="page">
+			<div class="navBox">
+				<ul class="pageNav">
+					<li class="user">
+						<!--<img src="../img/user.png" alt="" />-->
+					</li>
+					<li class="talk act_talk"></li>
+					<li class="address"></li>
+					<li class="collect"></li>
+					<li class="set"></li>
+				</ul>
+			</div>
+			<div class="pageContent" v-cloak>
+				<div class="con_nav">
+					<div class="seek_box">
+						<input type="text" placeholder="搜索" class="seek" v-model="seekValue" />
+						<a class="btn" href="javaScript:;"></a>
+					</div>
+					<div class="talk_list">
+						<ul class="talkList">
+							<li v-for="item,index in talkList"
+								@click="massageShow(item.id)"
+								@contextmenu="deleDialog(item.id)"
+							>
+					    		<img v-bind:src="item.photo"/>
+					    		<div class = "friend">
+					    			<div class="name">{{item.name}}</div>
+				    				<div class="info">{{item.massage[0]}}</div>
+					    		</div>
+			    			</li>
+						</ul>
+						<ul class="friendList">
+							<li v-for="item,index in list"
+								@click="friendShow(item,index)"
+								@contextmenu="listDialog(item.id)"
+							>
+					    		<img v-bind:src="item.photo"/>
+				    			<div class="name">{{item.name}}</div>
+			    			</li>
+						</ul>
+						<!--<ul class="seekList">
+							<li v-for="item,index in seekFn(seekValue.trim())"
+								@click="sendMassage(item.id)"
+							>
+					    		<img v-bind:src="item.photo"/>
+				    			<div class="name">{{item.name}}</div>
+			    			</li>
+						</ul>-->
+					</div>
+				</div>
+				<div class="con_show">
+					<div class="show_top"></div>
+					<div class = "friend_show">
+						<div class="friend_info">
+							<img v-bind:src="isSelected.photo"/>
+							<div class="friend_name">{{isSelected.name}}</div>
+							<div class="send_massage" @click="sendMassage(isSelected.id)">发消息</div>
+						</div>
+					</div>
+					<div class = "massage_show">
+						<div class="show_top">
+							<a href="javaScript:;">{{isSelected.name}}</a>
+							<a href="javaScript:;"></a>
+						</div>
+						<div class="show_talk">
+							<ul class="talk_info">
+								<li class="user_massage"
+									v-for="item,index in isSelected.massage"
+									@contextmenu="massageDialog(index)"
+								>
+									<img src="../img/user.png" alt="" />
+									<span>{{item}}<i></i></span>
+								</li>
+							</ul>
+						</div>
+						<div class="show_text">
+							<div class="tool">
+								<a href="javaScript:;" @click="faceDialog"></a>
+								<span >
+									<input type="file">
+								</span>
+								<a href="javaScript:;"></a>
+								<a href="javaScript:;"></a>
+							</div>
+							<textarea class="text" v-model="textValue" @keyup.13="sendText"></textarea>
+							<a class="send" href="javaScript:;" @click="sendText">发送（S）</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c_bnt">
+				<a href="javaScript:;" class="min">-</a>
+				<a href="javaScript:;" class="max">□</a>
+				<a href="javaScript:;" class="close">×</a>
+			</div>
+		</section>
+		<script src="../JS/template-native.js"></script>
+		<script src="../JS/jquery-3.1.1.js"></script>
+		<script src="../JS/vue.js"></script>
+		<script src="../JS/WX_data.js"></script>
+		<script src="../JS/WX_rande.js"></script>
+		<script src="../JS/WX_plug.js"></script>
+		<script src="../JS/index.js"></script>
+	</body>
+</html>
