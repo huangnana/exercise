@@ -1,15 +1,18 @@
 var WXdata = {
-	user:{
-		id:0,
-		name:"黄娜",
-		photo:"../img/user.png",
-		massage:[]
-	},
 	list:[
+		{
+			id:0,
+			name:"黄娜",
+			istalking:"false",
+			isUser:true,
+			photo:"../img/user.png",
+			massage:[]
+		},
 		{
 			id:1,
 			name:"张三",
 			istalking:"false",
+			isUser:false,
 			photo:"../img/photo2.png",
 			massage:[]
 		},
@@ -17,6 +20,7 @@ var WXdata = {
 			id:2,
 			name:"李四",
 			istalking:"false",
+			isUser:false,
 			photo:"../img/photo1.png",
 			massage:[]
 		},
@@ -24,6 +28,7 @@ var WXdata = {
 			id:3,
 			name:"王五",
 			istalking:"false",
+			isUser:false,
 			photo:"../img/photo3.png",
 			massage:[]
 		},
@@ -31,6 +36,7 @@ var WXdata = {
 			id:4,
 			name:"张同学",
 			istalking:"false",
+			isUser:false,
 			photo:"../img/photo.png",
 			massage:[]
 		},
@@ -38,6 +44,7 @@ var WXdata = {
 			id:5,
 			name:"李同学",
 			istalking:"false",
+			isUser:false,
 			photo:"../img/photo4.png",
 			massage:[]
 		},
@@ -45,28 +52,16 @@ var WXdata = {
 			id:6,
 			name:"王同学",
 			istalking:"false",
+			isUser:false,
 			photo:"../img/photo5.png",
 			massage:[]
 		},
 		{
 			id:7,
-			name:"小李",
-			istalking:"false",
-			photo:"../img/photo.png",
-			massage:[]
-		},
-		{
-			id:8,
 			name:"an",
 			istalking:"false",
+			isUser:false,
 			photo:"../img/photo4.png",
-			massage:[]
-		},
-		{
-			id:9,
-			name:"ann",
-			istalking:"false",
-			photo:"../img/photo5.png",
 			massage:[]
 		}
 	],

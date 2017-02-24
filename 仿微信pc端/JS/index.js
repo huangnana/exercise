@@ -42,7 +42,6 @@
 		storage.save("weixin",WXdata.list)
 	}
 	var data = storage.fetch("weixin");
-	$(".user").html(rander.userPhoto(WXdata.user.photo)); // 用户头像
 	var vm = new Vue({
 		el:".pageContent",
 		data:{
@@ -64,16 +63,27 @@
 				this.isSelected=this.list[index];
 				$(".friend_show").css("display","block");
 			},
-			seekFn:function(str){  //搜素好友
+			seekFn:function(str){ //搜素好友
+				if(str.length==0){
+					return;
+				}
 				var list = [];
 				for (var i=0;i<this.list.length;i++) {
-						if(this.list[i].name==str){
+						if(this.list[i].name.match(str)){
 							list.push(this.list[i])
 						}
 				}
-				$(".talkList").css("display","none");
-				$(".friendList").css("display","none");
 				return list
+			},
+			seekShow:function(){
+				$(".talk_list ul").css("display","none");
+				$(".seekList").css("display","block");
+			},
+			seekClick:function(id){
+				this.sendMassage(id);
+				$(".talk_list ul").css("display","none");
+				$(".talkList").css("display","block");
+				this.seekValue = "";
 			},
 			massageShow:function(id){ // 显示当前正选中的好友
 				for (var i=0;i<this.list.length;i++) {
@@ -92,7 +102,6 @@
 					}
 				}
 				talk();
-				$(".massage_show").css("display","block");
 			},
 			deleTalk:function(id){  // 删除聊天好友列表中的某一项
 				for (var i=0;i<this.list.length;i++) {
@@ -137,8 +146,17 @@
 					}
 				}
 			},
-			sendText:function(){ // 点击发送 输入框中的内容添加到消息列表中
-				if(this.textValue===""){
+			sendText:function(ev){ // 点击发送 输入框中的内容添加到消息列表中
+				if(!this.textValue.trim()){
+					$.dialog([    //弹窗
+						{
+							title:"不能发送空白消息"
+						}
+					])
+					$(".show_text").append($(".tanBox"))
+					$(".tanBox").css("top","68px")
+					$(".tanBox").css("left","400px")
+					ev.stopPropagation();
 					return
 				}
 				this.isSelected.massage.push(this.textValue);
@@ -181,8 +199,37 @@
 					}
 				}
 				return list;
+			},
+			isUser:function(){
+				var obj={};
+				for (var i=0;i<this.list.length;i++) {
+					if(this.list[i].isUser){
+						obj = this.list[i]
+					}
+				}
+				return obj;
 			}
 		}
+	})
+	$(".user").html(rander.userPhoto(vm.isUser.photo)); // 用户头像
+	$(".user").on("click",function(ev){
+		$.dialog([    //弹窗
+			{
+				title:"<img src = '"+vm.isUser.photo+"'/>",
+			},
+			{
+				title:vm.isUser.name,
+				todo:function(){}
+			},
+			{
+				title:"发消息",
+				todo:function(){
+					vm.massageShow(vm.isUser.id);
+					vm.sendMassage(vm.isUser.id);
+				}
+			}
+		])
+		ev.stopPropagation();
 	})
 	scroll($(".show_talk"),$(".talk_info"));
 // 输入框实现按Eenter键不换行，ctrl+enter键换行操作
@@ -202,10 +249,9 @@
 			return;
 		}
 		$(".talk").addClass("act_talk");
+		$(".talk_list ul").css("display","none");
 		$(".talkList").css("display","block");
 		$(".address").removeClass("act_address")
-		$(".friendList").css("display","none");
-		$(".seekList").css("display","none");
 		$(".massage_show").css("display","block");
 	}
 	function address(){
@@ -213,10 +259,9 @@
 			return;
 		}
 		$(this).addClass("act_address");
+		$(".talk_list ul").css("display","none");
 		$(".friendList").css("display","block");
 		$(".talk").removeClass("act_talk")
-		$(".talkList").css("display","none");
-		$(".seekList").css("display","none");
 		$(".massage_show").css("display","none");
 	}
 //  添加鼠标事件  移入移除点击变色
@@ -359,53 +404,89 @@
 		maxOff = !maxOff;
 	})
 //.............................. 自定义滚动条...........................................
+	var y = 0; //鼠标移动过的距离
+	var s =0;//变化系数
+	var maxBottom=0;
 	function scroll(parentEle,childEle){
 		var parentH = parentEle.height();
 		var childH = childEle.height();
 		var scroll = parentEle.find(".scroll")
-//		console.log(parentH, childH)
 		if(childH<=parentH){
 			scroll.remove();
-			return
-		}
-		if(scroll.length === 0){
-			var scroll = $("<div class = 'scroll'></div>");
-			parentEle.append(scroll);
-		}
-		var scrollH = parentH/childH*parentH;
-		if(scrollH<10){
-			scrollH=10
-		}
-		var y = 0; //鼠标移动过的距离
-		var maxBottom = parentH - scrollH; //可变化的最大top值
-		var s =0;//变化系数
-		var scroll = parentEle.find(".scroll")
-		scroll.height(scrollH);
-		parentEle.on("mouseover",function(){
-			scroll.css("display","block");
-		})
-		parentEle.on("mouseleave",function(){
-			scroll.css("display","none");
-		})
-		scroll.on("mousedown",function(ev){ //鼠标按下拖动事件
-			var disY = ev.clientY;
-			var B = parseFloat(scroll.css("bottom"))
-			$(document).on("mousemove.scroll",function(ev){
-				y = B-(ev.clientY - disY);
-				if(y<0){
-					y=0;
-				}
-				if(y>maxBottom){
-					y=maxBottom;
-				}
+			parentEle.off("mousewheel DOMMouseScroll");
+		}else{
+			if(scroll.length === 0){
+				var scroll = $("<div class = 'scroll'></div>");
+				parentEle.append(scroll);
+			}
+			var scrollH = parentH/childH*parentH;
+			maxBottom = parentH - scrollH; //可变化的最大top值
+			if(scrollH<10){
+				scrollH=10
+			}
+			var scroll = parentEle.find(".scroll")
+			scroll.height(scrollH);
+			parentEle.on("mouseover",function(){
+				scroll.css("display","block");
+			})
+			parentEle.on("mouseleave",function(){
+				scroll.css("display","none");
+			})
+			function scrollMove(){
 				s = y/maxBottom;
 				scroll.css("bottom",y);
 				childEle.css("bottom",-s*(childH-parentH))
+			}
+			//滚轮事件操作滚动条 
+			parentEle.off("mousewheel DOMMouseScroll");
+			addScroll(parentEle,goUp,goDown);
+			function goUp(){ // 滚动条向上运动
+				y+=5;
+				if(y>maxBottom){
+					y=maxBottom;
+				}
+				scrollMove();
+			}
+			function goDown(){ // 滚动条向下运动
+				y-=5;
+				if(y<0){
+					y=0;
+				}
+				scrollMove();
+			}
+			function addScroll(obj,fnUp,fnDown){
+				obj.on("mousewheel",fn1);
+				obj.on("DOMMouseScroll",fn1);
+				function fn1(ev){
+					if(ev.originalEvent.wheelDelta){
+						ev.originalEvent.wheelDelta<0 ? fnDown():fnUp();
+						return false;
+					}
+					if(ev.originalEvent.detail){
+						ev.originalEvent.detail>0 ? fnDown():fnUp();
+						ev.preventDefault();
+					}
+				}
+			}
+			//鼠标按下拖动事件
+			scroll.on("mousedown",function(ev){ 
+				var disY = ev.clientY;
+				var B = parseFloat(scroll.css("bottom"))
+				$(document).on("mousemove.scroll",function(ev){
+					y = B-(ev.clientY - disY);
+					if(y<0){
+						y=0;
+					}
+					if(y>maxBottom){
+						y=maxBottom;
+					}
+					scrollMove();
+				})
+				$(document).on("mouseup.scroll",function(){
+					$(document).off("mousemove.scroll mouseup.scroll")
+				})
 			})
-			$(document).on("mouseup.scroll",function(){
-				$(document).off("mousemove.scroll mouseup.scroll")
-			})
-		})
+		}
 	}
 })()
 

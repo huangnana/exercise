@@ -21,7 +21,9 @@
 			<div class="pageContent" v-cloak>
 				<div class="con_nav">
 					<div class="seek_box">
-						<input type="text" placeholder="搜索" class="seek" v-model="seekValue" />
+						<input type="text" placeholder="搜索" class="seek" v-model="seekValue"
+							@input="seekShow"
+						 />
 						<a class="btn" href="javaScript:;"></a>
 					</div>
 					<div class="talk_list">
@@ -33,7 +35,7 @@
 					    		<img v-bind:src="item.photo"/>
 					    		<div class = "friend">
 					    			<div class="name">{{item.name}}</div>
-				    				<div class="info">{{item.massage[0]}}</div>
+				    				<div class="info">{{item.massage[item.massage.length-1]}}</div>
 					    		</div>
 			    			</li>
 						</ul>
@@ -46,14 +48,14 @@
 				    			<div class="name">{{item.name}}</div>
 			    			</li>
 						</ul>
-						<!--<ul class="seekList">
+						<ul class="seekList">
 							<li v-for="item,index in seekFn(seekValue.trim())"
-								@click="sendMassage(item.id)"
+								@click="seekClick(item.id)"
 							>
 					    		<img v-bind:src="item.photo"/>
 				    			<div class="name">{{item.name}}</div>
 			    			</li>
-						</ul>-->
+						</ul>
 					</div>
 				</div>
 				<div class="con_show">
