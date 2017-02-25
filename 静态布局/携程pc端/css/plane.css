@@ -1,0 +1,89 @@
+.second_box .second_ico{
+	width:24px;
+	height: 16px;
+	background-position: 0 -36px;
+	position: absolute;
+	top:0;
+	left:36px;
+}
+.seek_form .plane_radio{
+	background:none;
+	padding:0;
+	height:30px;
+}
+.seek_form .plane_radio .form_radio{
+	line-height: 32px;
+}
+.plane_radio .form_radio .item1_radio{
+	margin-top:10px;
+}
+.form_item .plane_submit{
+	width:120px;
+}
+.form_item .more{
+	color:#0066CC;
+	line-height: 14px;
+}
+.form_item .item_con{
+	width:232px;
+	height:30px;
+	position:relative;
+}
+.item_con .change{
+	width:15px;
+	height:45px;
+	background-position: 0 -1246px;
+	position:absolute;
+	top:16px;
+	right:-20px;
+}
+.content .left_item1{
+	margin-bottom:15px;
+	border-bottom:10px solid #2477e1;
+	border-radius:6px;
+}
+.content .left_ad{
+	margin-bottom:5px;
+}
+.content .look_sale{
+	width:378px;
+	height:64px;
+	border:1px solid #cacaca;
+	border-top:4px solid #1476ff;
+	margin-bottom:3px;
+}
+.look_sale .globla{
+	width:49px;
+	height:49px;
+	background-position:0 -1293px;
+	margin:6px 10px 0 28px;
+}
+.look_sale .title{
+	font:18px/26px "微软雅黑";
+	color:#5b657e;
+	margin-top:8px;
+}
+.look_sale .sub_title{
+	line-height:20px;
+	color:#888;
+}
+.look_sale .turn{
+	width:32px;
+	height:28px;
+	background-position:0 -1344px;
+	margin:16px 20px 0 0;
+}
+.plane_tool_box .title{
+	font:18px/44px "微软雅黑";
+	color:#333;
+}
+.plane_tool_box .tool{
+	width:92px;
+	height:93px;
+	background: #e0f0ff;
+	text-align: center;
+	margin-right:3px;
+}
+.plane_tool_box .nomargin{
+	margin:0;
+}

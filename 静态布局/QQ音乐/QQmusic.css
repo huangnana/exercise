@@ -1,0 +1,631 @@
+body,h1,h3,dl,dd{
+	margin:0;
+}
+a{
+	text-decoration:none;
+	color:#515151;
+}
+img{
+	border:none;
+	vertical-align:top;
+}
+input{
+	padding:0;
+}
+ul,ol{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+body{
+	margin:0 auto;
+	font-size:12px;
+}
+.width{
+	width:960px;
+	margin:0 auto;
+}
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.head {
+	border-bottom:1px solid #dddddd;
+}
+.head .head_top{
+	height:30px;
+	background:#2f2f2f;
+	color:#b5b5b5;
+}
+.top_box .box_con{
+	float:right;
+	height:18px;
+	line-height:18px;
+	margin:6px 0;
+}
+.top_box a{
+	float:left;
+	color:#b5b5b5;
+	margin-left:13px;
+}
+.top_box span{
+	float:left;
+	margin-left:6px;
+}
+.top_box .big{
+	height:18px;
+	background:url(head-1.jpg) no-repeat;
+	padding-left:21px;
+}
+.top_box .sell{
+	height:18px;
+	background:url(head-2.jpg) no-repeat;
+	padding-left:21px;
+}
+.top_box .nomargin{
+	margin:0;
+}
+.head_bottom .logo{
+	float:left;
+	width:183px;
+	height:0;
+	padding-top:54px;
+	background:url(logo.jpg) no-repeat;
+	overflow:hidden;
+	margin-top:31px;
+}
+.head_bottom .bottom_con{
+	float:left;
+	margin-left:57px;
+}
+.head_bottom .title-1{
+	float:left;
+	width:88px;
+	height:0;
+	padding-top:75px;
+	background:url(title-1.jpg) no-repeat;
+	overflow:hidden;
+}
+.head_bottom .title-2{
+	float:left;
+	width:76px;
+	height:0;
+	padding-top:75px;
+	background:url(title-2.jpg) no-repeat;
+	overflow:hidden;
+}
+.head_bottom .title-3{
+	float:left;
+	width:84px;
+	height:0;
+	padding-top:75px;
+	background:url(title-3.jpg) no-repeat;
+	overflow:hidden;
+}
+.head_bottom .title-4{
+	float:left;
+	width:128px;
+	height:0;
+	padding-top:75px;
+	background:url(title-4.jpg) no-repeat;
+	overflow:hidden;
+}
+.bottom_con .nav{
+	padding-left:20px;
+}
+.bottom_con .nav a{
+	float:left;
+	line-height:38px;
+	color:#6e6e6e;
+}
+.bottom_con .nav span{
+	float:left;
+	width:1px;
+	height:11px;
+	background:url(shu.jpg) no-repeat;
+	margin:15px 18px 0 15px;
+}
+.head .active{
+	color:#0dad51;
+}
+.head_bottom .seek{
+	float:left;
+	position:relative;
+}
+.seek .seek_box{
+	width:218px;
+	height:29px;
+	border:1px solid #c3c3c3;
+	position:absolute;
+	top:42px;
+	left:91px;
+	z-index: 1;
+}
+.seek .seek_button{
+	width:13px;
+	height:12px;
+	border:none;
+	background:url(seek.jpg) no-repeat;
+	position:absolute;
+	top:52px;
+	left:287px;
+	z-index: 2;
+}
+.head_bottom .bg{
+	float:left;
+	width:228px;
+	height:39px;
+	background:#f0f0f0;
+	position:absolute;
+	top:38px;
+	left:87px;
+}
+.page{
+	padding:20px 0 116px 0;
+}
+.page .page_left{
+	float:left;
+	width:700px;
+	margin-right:40px;
+}
+.page .page_left .left_top{
+	position:relative;
+	margin-bottom:40px;
+}
+.left_top .left_top_img{
+	display:block;
+	width:700px;
+	height:280px;
+	background:url(left-1.jpg) no-repeat;
+}
+.left_top .turn_left{
+	position:absolute;
+	top:105px;
+	left:0;
+	width:35px;
+	height:70px;
+	background:url(turn-left.jpg) no-repeat;
+}
+.left_top .turn_right{
+	position:absolute;
+	top:105px;
+	right:0;
+	width:35px;
+	height:70px;
+	background:url(turn-right.jpg) no-repeat;
+}
+.all_title{
+	float:left;
+	width:120px;
+	height:0;
+	padding-top:30px;
+	background:url(online-1.jpg) no-repeat 10px 0;
+	overflow:hidden;
+	border-left:5px solid #ff0000;
+}
+.all_more{
+	float:left;
+	width:36px;
+	height:0;
+	padding-top:14px;
+	background:url(online-2.jpg) no-repeat;
+	overflow:hidden;
+	margin:13px 0 0 10px;
+}
+.online_turn{
+	float:right;
+}
+.online_turn .online_turn1{
+	float:left;
+	width:32px;
+	height:31px;
+	background:url(online-3.jpg) no-repeat;
+}
+.online_turn .online_turn2{
+	float:left;
+	width:32px;
+	height:31px;
+	background:url(online-4.jpg) no-repeat;
+}
+.online .online_con{
+	margin:7px -12px 38px 0;
+	
+}
+.online_list{
+	float:left;
+	width:130px;
+	height:130px;
+	position:relative;
+	margin:10px 12px 0 0;
+}
+.online_list .online_img{
+	width:130px;
+	height:130px;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+.online_list .online_bg{
+	width:130px;
+	height:48px;
+	background:#241e17;
+	position:absolute;
+	bottom:0;
+	left:0;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+}
+.online_list .online_info{
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+.online_info .online_song{
+	display:block;
+	color:#0cc65b;
+	line-height:28px;
+	padding-left:3px;
+}
+.online_info .online_singer{
+	display:block;
+	color:#ffffff;
+	line-height:18px;
+	padding-left:3px;
+}
+.mv .mv_title{
+	width:102px;
+	background:url(mv-title.jpg) no-repeat 10px 0;
+}
+.mv .mv_con{
+	margin:2px -20px 28px 0; 
+}
+.mv_con .mv_list{
+	float:left;
+	width:160px;
+	font-family:"微软雅黑";
+	margin:16px 20px 0 0;
+}
+.mv_list .mv_info{
+	line-height: 32px;
+}
+.mv_info .mv_song{
+	color:#0c8f44;
+}
+.mv_info .mv_singer{
+	color:#515151;
+}
+.mv_list .mv_tp{
+	line-height:14px;
+	color:#8b8b8b;
+}
+.mv_list .mv_deta{
+	line-height:32px;
+	text-align:right;
+	color:#c1a3b2;
+}
+.most{
+	margin-bottom:14px;
+}
+ .most .most_head{
+	margin-bottom:12px;
+}
+.most_head .most_title{
+	background:url(most-title.jpg) no-repeat 10px 0;
+	border-color:#0dad51;
+}
+.most .most_new{
+	float:left;
+	width: 350px;
+}
+.most .most_hot{
+	width:349px;
+	float:left;
+	border-left:1px solid #e5e5e5;
+}
+ .all_button{
+	float:left;
+}
+ .play{
+	float:left;
+	width:30px;
+	height:30px;
+	background:url(play.jpg) no-repeat;
+	margin:0 10px 0 9px;
+}
+.all_button .add{
+	float:left;
+	width:30px;
+	height:30px;
+	background:url(add.jpg) no-repeat;
+}
+.all_nav{
+	float:right;
+	padding-right:17px;
+}
+.all_nav a{
+	float:left;
+	color:#0c8f44;
+	line-height:30px;
+}
+.all_nav span{
+	float:left;
+	width:1px;
+	height:12px;
+	background:url(shu2.jpg) no-repeat;
+	margin:10px 7px 0 7px;
+}
+.all_nav .active{
+	color:#333333;
+	font-weight:bold;
+}
+.most_info{
+	height:35px;
+	border-bottom:1px dashed #ffffff;
+}
+.most_info .most_song{
+	float:left;
+	line-height: 34px;
+	color:#0c8f44;
+}
+.most_info span{
+	float:left;
+	width: 5px;
+	height:1px;
+	background:url(heng.jpg) no-repeat;
+	margin:18px 2px 0 6px;
+}
+.most_info .most_singer{
+	float:left;
+	line-height: 36px;
+}
+.most_info:hover{
+	border-color:#8B8B8B;
+}
+.most .most_hot .most_head{
+	margin-left:-1px;
+}
+.most .most_hot .most_info{
+	padding-left:21px;
+}
+.most_hot .most_head .most_title{
+	background:url(hot.jpg) no-repeat 10px 0;
+}
+.selection .sele_title{
+	float:none;
+	width:92px;
+	background:url(sele.jpg) no-repeat 10px 0;
+	border-color:#f3508d;
+	margin-bottom:18px;
+}
+.selection .sele_big{
+	width:270px;
+	float:left;
+	margin-right:15px;
+}
+.selection .img_mv{
+	line-height:22px;
+	color:#0c8f44;
+}
+.selection .img_info{
+	line-height:28px;
+	color:#8b8b8b;
+}
+.selection .sele_mv{
+	width:415px;
+	float:left;
+}
+.selection .sele_list{
+	float:left;
+	margin:0 12px 0 0;
+}
+.selection .sele_info{
+	line-height:28px;
+	color:0c8f44;
+}
+.selection .sele_mv .nomargin{
+	margin:0px;
+}
+.page_right{
+	float:left;
+	width:220px;
+}
+.page_right .user{
+	height:80px;
+	border-bottom:1px solid #e4e4e4;
+	background:url(right-title.jpg) no-repeat 0 0;
+	padding:55px 0 0 25px;
+}
+.user .user_in{
+	display:block;
+	width:170px;
+	height:45px;
+	background:url(user.jpg) no-repeat;
+}
+.page_right .team{
+	padding-top:20px;
+	margin-bottom:24px;
+}
+.team .team_more{
+	text-align:center;
+	margin-top:2px;
+}
+.team_more .team_submit{
+	width:7px;
+	height:7px;
+	border:none;
+	background:url(submit.jpg) no-repeat;
+}
+.top_head{
+	margin-bottom:6px;
+}
+.right_title{
+	float:left;
+	width:54px;
+	height:0;
+	padding-top:30px;
+	overflow:hidden;
+	background:url(top.jpg) no-repeat;
+}
+.top_button .play{
+	margin-left:11px;
+}
+.top .top_nav{
+	padding:0;
+	float:none;
+	line-height: 38;
+	margin-top:4px;
+	
+}
+.top .top_ranking{
+	padding:5px 0 13px 0;
+	border-bottom:1px dashed #c6c6c6;
+}
+.ran_list1 .top1{
+	float:left;
+	color:#ff5400;
+	font-size:22px;
+	margin-right:10px;
+}
+.ran_list1 .top1_info{
+	float:left;
+}
+.top1_info .top1_song{
+	font:22px/26px "宋体";
+}
+.top1_song a{
+	color:#ff5400;
+}
+.top1_info .top1_singer{
+	line-height: 16px;
+	margin-top:8px;
+}
+.ran_list{
+	line-height:24px;
+}
+.ran_list .number{
+	float:left;
+	margin-right:28px;
+}
+.ran_list .top_song{
+	float:left;
+	color:#628f44;
+}
+.ran_list .top_singer{
+	float:right;
+}
+.top .number_list{
+	margin-right:-20px;
+	padding:13px 0 14px 0;
+	border-bottom:1px solid #E4E4E4;
+}
+.number_list .list_name{
+	float:left;
+	margin-right:20px;
+	line-height:24px;
+}
+.list_name a{
+	display:block;
+}
+.hot_head .hot_title{
+	width:72px;
+	background: url(hot-title.jpg) no-repeat;
+}
+.page_right .hot_singer{
+	padding:20px 0 0 0;
+}
+.hot_head .hot_more{
+	margin-top:10px;
+}
+.hot_singer .singer_cd{
+	margin-right:-34px;
+	padding: 3px 0 8px 0;
+	border-bottom: 1px dashed #E4E4E4;
+}
+.singer_cd .cd_name{
+	float:left;
+	margin:10px 34px 0 0;
+}
+.singer_name a{
+	line-height:30px;
+	color:#0c8f44;
+}
+.hot_singer .singer_list{
+	margin-right:-25px;
+	padding-top:13px;
+	border-bottom:1px solid #E4E4E4;
+}
+.singer_list .singer_class{
+	float:left;
+	line-height: 24px;
+	margin-right:25px;
+}
+.singer_class a{
+	display:block;
+}
+.page_right .activity{
+	padding:13px 0 20px 0;
+	border-bottom:1px solid #E4E4E4;
+}
+.activity_list{
+	padding-top:7px;
+}
+.activity_head .activity_title{
+	float:none;
+	width:72px;
+	background: url(huodong.jpg) no-repeat;
+}
+.activity .activity_name{
+	margin-top:7px;
+}
+.act_name a{
+	line-height: 24px;
+	color:#0C8F44;
+}
+.foot{
+	background: #f7f7f7;
+}
+.foot .foot_con{
+	padding:29px 0 0 35px;
+	margin-bottom:49px;
+}
+.foot_con .down{
+	float:left;
+	margin-right:86px;
+}
+.foot_con .product{
+	float:left;
+	margin-right:76px;
+}
+.foot_con .link{
+	float:left;
+}
+.foot_con a{
+	margin-left:13px;
+}
+.foot_con dt{
+	margin-left:13px;
+	font:bold 16px/32px "宋体";
+	color:#757575;
+}
+.foot_con dd{
+	line-height:26px;
+}
+.foot_bottom{
+	text-align: center;
+	line-height: 24px;
+	color:#8b8b8b;
+}
+.foot_bottom .about{
+	padding-left:228px;
+}
+.foot_bottom a{
+	float:left;
+}
+.foot_bottom span{
+	float:left;
+	width:1px;
+	height:11px;
+	background:url(shu-foot.jpg) no-repeat;
+	margin:7px 3px 0 3px;
+}

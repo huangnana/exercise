@@ -1,0 +1,57 @@
+body{
+	font-size:12px;
+	color:#999;
+	position:relative;
+}
+.width_center{
+	width:1180px;
+	margin:0 auto;
+}
+.float_left{
+	float:left;
+}
+.float_right{
+	float:right;
+}
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.ico{
+	background: url(../img/xuebitu.png24.png) no-repeat;
+}
+.ico2{
+	background: url(../img/xuebitu2.png24.png) no-repeat;
+}
+.ico3{
+	background: url(../img/xuebitu3.png) no-repeat;
+}
+.margin_right{
+	margin-right:10px;
+}
+ .out{
+	height:20px;
+	line-height: 20px;
+	margin-top:5px;
+	color:#3983e4;
+}
+ .out_bg{
+	display:inline-block;
+	width:10px;
+	height:5px;
+	background-position:0 -465px;
+	margin:0 5px;
+}
+#foot .noborder,#content .noborder{
+	border:none;
+}
+.nomargin{
+	margin:0;
+}
+.margin_bottom{
+	margin-bottom:20px;
+}
+.left_item7 .take_button{
+	overflow: hidden;
+}

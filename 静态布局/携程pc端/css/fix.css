@@ -1,0 +1,148 @@
+.clearfix{
+	zoom:1;
+}
+.ico{
+	display: inline;
+	overflow: hidden;
+}
+.ico2{
+	display: inline;
+	overflow: hidden;
+}
+.ad_list .list_word{
+	overflow: hidden;
+}
+.seek_nav .nav_tp{
+	overflow:hidden;
+	zoom:1;
+}
+.seek_box .seek_nav{
+	overflow: hidden;
+}
+.nav_item .bg{
+	overflow: hidden;
+}
+form{
+	margin:0;
+}
+.head_form .form_word{
+	overflow: hidden;
+}
+.fixed_left{
+	position: absolute;
+	left:0;
+	top:expression(eval(document.documentElement.scrollTop + 400));
+}
+.fixed_right{
+	position: absolute;
+	right:0;
+	top:expression(eval(document.documentElement.scrollTop + 0));
+}
+.all_nav .nav_bg{
+	position:absolute;
+	left:23px;
+	bottom:-1px;
+}
+.out_bg{
+	vertical-align:middle;
+	margin:8px 5px;
+}
+.list_con .img_bg{
+	filter:alpha(opacity=50);
+}
+.img_info .hui{
+	vertical-align:1px;
+}
+.big_con .img_bg{
+	filter:alpha(opacity=50);
+}
+.travel_list,.right_li{
+	display:inline;
+}
+.value .old{
+	overflow: hidden;
+}
+.right_li .li_bg{
+	filter:alpha(opacity=30);
+}
+.plane_left .hot_bg{
+	filter:alpha(opacity=30);
+}
+.pos .pos_bg{
+	filter:alpha(opacity=30);
+}
+.plane_left .hot{
+	overflow: hidden;
+}
+.middle_li .img_bg,.item_7 .img_bg{
+	filter:alpha(opacity=30);
+}
+.item_li{
+	overflow: hidden;
+}
+.save_li .top_dd{
+	width:254px;
+}
+.li_bottom .li_ico{
+	display: inline;
+	vertical-align: -2px;
+}
+.li_bottom .insurance{
+	overflow: hidden;
+	zoom:1;
+}
+.coop_dt .coop_more{
+	overflow: hidden;
+}
+.link_dd{
+	width:1066px;
+}
+/*酒店页面*/
+.second .second_con{
+	overflow: hidden;
+}
+.ico3{
+	display: inline;
+	overflow: hidden;
+	zoom:1;
+}
+.item1_title .item1_ico{
+	vertical-align:middle;
+	margin:12px 8px 13px 4px;
+}
+.form_radio .item1_radio{
+	margin:10px -3px 0 -5px;
+}
+.plane_radio .form_radio .item1_radio{
+	margin-top:5px;
+}
+.left_form .radio_box .nomargin{
+	margin:0;
+}
+.seek_form .form_word{
+	overflow: hidden;
+}
+.left_item7 .take{
+	line-height: 30px;
+}
+.con2_middle .plane{
+	background-position: 0 -322px;
+	margin:0;
+}
+.right_con3 .con3_bg{
+	filter:alpha(opacity=30);
+}
+.right_con4 .info_ico{
+	display: inline-block;
+	width:1px;
+	height:12px;
+	background-position: 0 -726px;
+	margin:6px 7px 0 4px;
+	vertical-align:4px;
+}
+.look_sale .sub_title{
+	line-height:20px;
+	color:#888;
+	font-size:12px;
+}
+

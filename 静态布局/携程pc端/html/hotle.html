@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/global.css" />
+		<link rel="stylesheet" href="../css/hotle.css" />
+		<link rel="stylesheet" href="../css/tool.css" />
+		<!--[if lte IE 8]> 
+			<link rel="stylesheet" href="../css/fix.css" />
+		<![endif]-->
+		<script src="../js/html5shiv.js"></script>
+		<script src="../js/DD_belatedPNG_0.0.8a.js"></script>
+	</head>
+	<body>
+		<header id="head">
+			<div class="head_top width_center clearfix">
+				<h1 class="logo_box float_left">
+					<a class="logo float_left" href="..">携程</a>
+				</h1>
+				<div class="head_info float_right">
+					<a class="language float_left" href="..">
+						<img class="img float_left" src="../img/yuyan.jpg"/>
+						<span class="word float_left">简体中文</span></a>
+						<span class="shu float_left"></span>
+					<a class="service float_left" href="..">客服中心</a><span class="shu float_left"></span>
+					<a class="call float_left" href="..">国内：<span>1010-6666</span></a>
+					<a class="favorable float_left" href=".."></a>
+				</div>
+			</div>
+			<div class="head_middle">
+				<div class="head_con width_center clearfix">
+					<nav class="head_nav float_left">
+						<div class="head_item float_left">
+							<a class="nav_con float_left" href="..">首页</a><span class="nav_shu float_left"></span>	
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con active float_left" href="..">酒店</a><span class="nav_shu float_left"></span>
+							<div class="second float_left">
+								<a class="second_con press float_left" href="..">国内酒店</a>
+								<a class="second_con float_left" href="..">国际酒店</a>
+								<a class="second_con float_left" href="..">团购</a>
+								<div class="second_box float_left">
+									<a class="second_con float_left" href="..">特卖酒店</a>
+									<span class="second_ico ico3 float_left"></span>
+								</div>
+								<a class="second_con float_left" href="..">途家公寓</a>
+								<a class="second_con float_left" href="..">酒店﹢景点</a>
+								<a class="second_con float_left" href="..">客栈民宿</a>
+								<a class="second_right  float_right" href="..">酒店订单></a>
+							</div>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con float_left" href="..">旅游</a><span class="nav_shu float_left"></span>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con float_left" href="..">机票</a><span class="nav_shu float_left"></span>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con float_left" href="..">火车</a><span class="nav_shu float_left"></span>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con float_left" href="..">汽车票</a><span class="nav_shu float_left"></span>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con float_left" href="..">用车</a><span class="nav_shu float_left"></span>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con float_left" href="..">门票</a><span class="nav_shu float_left"></span>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con float_left" href="..">团购</a><span class="nav_shu float_left"></span>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con nobg float_left" href="..">攻略</a><span class="nav_shu float_left"></span>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con float_left" href="..">全球购</a><span class="nav_shu float_left"></span>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con float_left" href="..">礼品卡</a><span class="nav_shu float_left"></span>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con float_left" href="..">商旅</a><span class="nav_shu float_left"></span>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con float_left" href="..">更多</a><span class="nav_shu float_left"></span>
+						</div>
+						<div class="head_item float_left">
+							<a class="nav_con nobg float_left" href="..">游轮</a>
+						</div>	
+					</nav>
+					<div class="login float_right">
+						<div class="enter clearfix">
+							<a class="enter_word float_left" href="..">登录</a>
+							<span class="enter_shu float_left ico"></span>
+							<a class="enter_word float_left" href="..">注册</a>
+						</div>
+						<div class="my">
+							<a class="my_word" href="..">我的携程<span class="ico my_ico"></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--头部结束-->
+		<section class="content width_center clearfix">
+			<div class="con_left float_left">
+				<div class="left_item1 margin_bottom">
+					<h3 class="item1_title"><span class="ico3 item1_ico"></span>搜索国内酒店</h3>
+					<form class="left_form">
+						<div class="radio_box clearfix">
+							<div class="form_radio float_left">
+								<input type="radio" class="item1_radio float_left" />酒店
+							</div>
+							<div class="form_radio float_left">
+								<input type="radio" class="item1_radio float_left" />酒店﹢景点
+							</div>
+							<div class="form_radio float_left nomargin">
+								<input type="radio" class="item1_radio float_left" />客栈民宿
+							</div>
+						</div>
+						<div class="seek_form">
+							<dl class="form_item clearfix">
+								<dt class="form_word float_left">
+									<label for="address">目的地</label>
+								</dt>
+								<dd class="item_con float_left">
+									<input type="text" class="text float_left" id="address" />
+								</dd>
+							</dl>
+							<dl class="form_item clearfix">
+								<dt class="form_word float_left">
+									<label for="in">入住日期</label>
+								</dt>
+								<dd class="item_con float_left">
+									<input type="text" class="text float_left" id="in" />
+								</dd>
+							</dl>
+							<dl class="form_item clearfix">
+								<dt class="form_word float_left">
+									<label for="out">退房日期</label>
+								</dt>
+								<dd class="item_con float_left">
+									<input type="text" class="text float_left" id="out" />
+								</dd>
+							</dl>
+							<dl class="form_item clearfix">
+								<dt class="form_word float_left">酒店级别</dt>
+								<dd class="item_con float_left">
+									<select name="rank float_left" class="rank">
+										<option value="unlimited">不限</option>
+										<option value="three_star">三星</option>
+										<option value="four_star">四星</option>
+										<option value="five_syar">五星</option>
+									</select>
+								</dd>
+							</dl>
+							<dl class="form_item key clearfix">
+								<dt class="form_word float_left">
+									<label for="key">关键词</label>
+								</dt>
+								<dd class="item_con float_left">
+									<input type="text" class="text float_left" id="key" />
+								</dd>
+							</dl>
+							<dl class="form_item clearfix">
+								<dt class="form_word float_left"></dt>
+								<dd class="item_con float_left">
+									<input type="submit" value="搜索" class="seek_button float_left" />
+								</dd>
+							</dl>
+						</div>
+					</form>
+				</div>
+				<div class="left_item2 margin_bottom">
+					<h3 class="item2_title ico3">周边酒店</h3>
+					<div class="item2_word">还没想好周末去哪玩?</div>
+					<div class="sub_title">为您推荐感兴趣的酒店和周边景点</div>
+					<div class="item2_city clearfix">
+						<a class="city_name float_left" href="..">北京</a>
+						<a class="city_name float_left" href="..">上海</a>
+						<a class="city_name float_left" href="..">广州</a>
+						<a class="city_name float_left" href="..">成都</a>
+						<a class="city_name float_left" href="..">杭州</a>
+						<a class="city_name float_left" href="..">南京</a>
+						<a class="city_name float_left" href="..">深圳</a>
+						<a class="city_name float_left" href="..">西安</a>
+					</div>
+				</div>
+				<div class="left_item3 margin_bottom">
+					<h3 class="item3_title ico3">发现酒店期刊</h3>	
+					<div class="item3_play clearfix">
+						<a class="play_img float_left" href="..">
+							<img src="../img/hotle-play.jpg" />
+						</a>
+						<div class="play_info float_left">
+							<div class="info_title">十月音乐节玩乐指南</div>							<div class="info_con">音乐节狂欢怎少的了好酒店!</div>
+							<div class="info_new">更新：2015.09.30</div>
+						</div>
+					</div>
+					<a class="item3_find" href="..">开启发现之旅 〉</a>
+				</div>
+				<div class="left_item4 clearfix">
+					<div class="item4_word float_left">
+						<div class="word_1">别说话,扫我</div>
+						<div class="word_2">5元立减</div>
+					</div>
+					<div class="item4_img float_left">
+						<img src="../img/hotle-erweima.jpg" />
+					</div>
+				</div>
+				<div class="left_item5">
+					<h3 class="item5_title">促销特惠<span class="title_ico ico3"></span></h3>	
+					<div class="item5_img">
+						<a href="..">
+							<img src="../img/hotle-img1.jpg" />
+						</a>				
+					</div>
+				</div>
+				<ul class="left_item6">
+					<li class="item6_li">
+						<a href="..">
+							<img src="../img/hotle-img2.jpg"/>
+						</a>
+					</li>	
+					<li class="item6_li">
+						<a href="..">
+							<img src="../img/hotle-img3.jpg"/>
+						</a>
+					</li>		
+					<li class="item6_li">
+						<a href="..">
+							<img src="../img/hotle-img4.jpg"/>
+						</a>
+					</li>		
+					<li class="item6_li">
+						<a href="..">
+							<img src="../img/hotle-img5.jpg"/>
+						</a>
+					</li>		
+				</ul>
+				<div class="left_item7">
+					<form class="clearfix">
+						<label for="take" class="take_word float_left">订阅促销信息</label>
+						<input type="text" class="take float_left" id="take" />
+						<a class="take_button float_left" href="..">订阅</a>
+					</form>
+				</div>
+				<ul class="left_item8">
+					<li class="item8_li">
+						<a href="..">
+							<img src="../img/hotle-img6.jpg"/>
+						</a>
+					</li>	
+					<li class="item8_li">
+						<a href="..">
+							<img src="../img/hotle-img7.jpg"/>
+						</a>
+					</li>		
+					<li class="item8_li">
+						<a href="..">
+							<img src="../img/hotle-img8.jpg"/>
+						</a>
+					</li>		
+				</ul>
+			</div>
+		<!-- 页面左侧结束-->
+			<div class="con_right float_left">
+				<div class="right_con1">
+					<a href="..">
+						<img src="../img/hotle-right1.jpg" />
+					</a>
+					<div class="img_info">携程在手，说走就走</div>
+					<div class="con1_turn clearfix">
+						<a class="turn_button float_left ico3" href=".."></a>
+						<a class="turn_button active float_left ico3" href=".."></a>
+						<a class="turn_button float_left ico3" href=".."></a>
+						<a class="turn_button float_left ico3 " href=".."></a>
+						<a class="turn_button float_left ico3" href=".."></a>
+						<a class="turn_button float_left ico3" href=".."></a>
+						<a class="turn_button float_left ico3" href=".."></a>
+						<a class="turn_button float_left ico3" href=".."></a>
+					</div>			
+				</div>
+				<div class="right_con2">
+					<div class="con2_top clearfix">
+						<h3 class="con2_tilte float_left">城市地标周边酒店</h3>
+						<nav class="con2_nav float_left">
+							<a class="nav_con  float_left" href="..">北京<span class="nav_bg ico2"></span></a>
+							<a class="nav_con active float_left" href="..">上海<span class="nav_bg ico2"></span></a>
+							<a class="nav_con float_left" href="..">广州<span class="nav_bg ico2"></span></a>
+							<a class="nav_con float_left" href="..">成都<span class="nav_bg ico2"></span></a>
+							<a class="nav_con float_left" href="..">深圳<span class="nav_bg ico2"></span></a>
+							<a class="nav_con float_left" href="..">杭州<span class="nav_bg ico2"></span></a>
+							<a class="nav_con float_left" href="..">更多<span class="out_bg ico2"></span></a>
+						</nav>
+						<div class="float_right">
+							<a class="nav_right float_left" href="..">全部地标></a>
+						</div>
+					</div>
+					<div class="con2_bottom margin_bottom">
+						<div class="con2_left float_left">
+							<div class="left_ico ico3"></div>
+							<div class="left_word">主题地标</div>
+						</div>
+						<div class="con2_middle float_left">
+							<a class="landmark float_left" href=".."><span class="ylc landmark_ico ico3"></span>游乐园</a>
+							<a class="landmark float_left" href=".."><span class="spot landmark_ico ico3"></span>景区</a>
+							<a class="landmark float_left" href=".."><span class="suway landmark_ico ico3"></span>地铁站</a>
+							<a class="landmark float_left" href=".."><span class="plane landmark_ico ico3"></span>机场/火车站</a>
+							<a class="landmark float_left" href=".."><span class="business landmark_ico ico3"></span>商业区</a>
+							<a class="landmark float_left" href=".."><span class="hospital landmark_ico ico3"></span>医院</a>
+							<a class="landmark float_left" href=".."><span class="center landmark_ico ico3"></span>会展中心</a>
+						</div>
+						<div class="con2_right float_right">
+							<a class="right_word float_left" href=".."><span class="right_ico ico3"></span>搜索地标</a>
+						</div>
+					</div>
+				</div>
+				<div class="right_con3 margin_bottom">
+					<a href="..">
+						<img src="../img/con-right3.jpg" />	
+					</a>
+					<div class="con3_bg"></div>
+					<ul class="con3_ul">
+						<li class="con3_li">
+							<a class="li_word" href="..">登山胜地酒店77元起 </a>
+						</li>
+						<li class="con3_li">
+							<a class="li_word" href="..">亲子酒店5折起</a>
+						</li>
+						<li class="con3_li">
+							<a class="li_word active" href="..">碧桂园5折起<span class="li_ico ico3"></span></a>
+						</li>
+						<li class="con3_li">
+							<a class="li_word" href="..">五元房券免费送</a>
+						</li>
+						<li class="con3_li">
+							<a class="li_word noborder" href="..">十月热门旅行目的地</a>
+						</li>
+					</ul>
+				</div>
+				<div class="right_con4">
+					<div class="con2_top margin_bottom clearfix">
+						<h3 class="con2_tilte float_left">热门酒店</h3>
+						<nav class="con2_nav float_left">
+							<a class="nav_con  float_left" href="..">北京<span class="nav_bg ico2"></span></a>
+							<a class="nav_con active float_left" href="..">上海<span class="nav_bg ico2"></span></a>
+							<a class="nav_con float_left" href="..">广州<span class="nav_bg ico2"></span></a>
+							<a class="nav_con float_left" href="..">成都<span class="nav_bg ico2"></span></a>
+							<a class="nav_con float_left" href="..">深圳<span class="nav_bg ico2"></span></a>
+							<a class="nav_con float_left" href="..">长春<span class="nav_bg ico2"></span></a>
+							<a class="nav_con float_left" href="..">更多<span class="out_bg ico2"></span></a>
+						</nav>
+						<div class="con4_right float_right"></div>
+					</div>
+					<ul class="con4_ul">
+						<li class="con4_li clearfix">
+							<a class="float_left margin_right" href="..">
+								<img src="../img/right-con2.jpg" />
+							</a>							<div class="li_middle float_left">
+								<div class="hotle clearfix">
+									<span class="hotle_ico1 ico3 float_left"></span>
+									<a class="hotle_name float_left" href="..">上海中环国际酒店</a>
+									<span class="star_4 ico3 float_left"></span>
+								</div>
+								<div class="position_box">
+									<a class="hotle_pos" href="..">曹杨、真如地区</a>
+									<a class="hotle_pos" href="..">大宁国际商业区</a>
+								</div>
+								<div class="hotle_info">
+									4.4分<span class="ico3 info_ico"></span>来自2203人点评
+								</div> 
+								<div class="comment_box">
+									<a class="hotle_comment" href="..">
+										“环境还不错”
+									</a>
+								</div>
+							</div>
+							<div class="li_right float_right">
+								<div class="value clearfix">
+									<span class="other float_left">¥</span>
+									<span class="new float_left">588</span>
+									<span class="qi float_left">起</span>
+								</div>
+								<div class="reserve_info">最新预定：1小时前</div>
+							</div>
+						</li>
+						<li class="con4_li clearfix">
+							<a class="float_left margin_right" href="..">
+								<img src="../img/right-con3.jpg" />
+							</a>
+							<div class="li_middle float_left">
+								<div class="hotle clearfix">
+									<span class="hotle_ico1 ico3 float_left"></span>
+									<a class="hotle_name float_left" href="..">龙通花园酒店(上海虹桥机场航中路地铁站店)</a>
+									<span class="star_3 ico3 float_left"></span>
+								</div>
+								<div class="position_box">
+									<a class="hotle_pos" href="..">虹桥枢纽地区</a>
+									<a class="hotle_pos" href="..">七宝古镇</a>
+								</div>
+								<div class="hotle_info">
+									4.4分<span class="ico3 info_ico"></span>来自2960人点评
+								</div> 
+								<div class="comment_box">
+									<a class="hotle_comment" href="..">
+										“设施环境都不错服务十分满意”
+									</a>
+								</div>
+							</div>
+							<div class="li_right float_right">
+								<div class="value clearfix">
+									<span class="other float_left">¥</span>
+									<span class="new float_left">279</span>
+									<span class="qi float_left">起</span>
+								</div>
+								<div class="reserve_info">最新预定：3小时前</div>
+							</div>
+						</li>
+						<li class="con4_li clearfix">
+							<a class="float_left margin_right" href="..">
+								<img src="../img/right-con4.jpg" />
+							</a>
+							<div class="li_middle float_left">
+								<div class="hotle clearfix">
+									<span class="hotle_ico2 ico3 float_left"></span>
+									<a class="hotle_name float_left" href="..">乐舒酒店(上海徐家汇八万人体育场店)</a>
+									<span class="star_4 ico3 float_left"></span>
+								</div>
+								<div class="position_box">
+									<a class="hotle_pos" href="..">八万人体育场地区</a>
+									<a class="hotle_pos" href="..">徐家汇地区</a>
+								</div>
+								<div class="hotle_info">
+									4.8分<span class="ico3 info_ico"></span>来自143280人点评
+								</div> 
+								<div class="comment_box">
+									<a class="hotle_comment" href="..">
+										“环境还不错，去徐家汇也很方便，一直很喜欢的酒店”
+									</a>
+								</div>
+							</div>
+							<div class="li_right float_right">
+								<div class="value clearfix">
+									<span class="other float_left">¥</span>
+									<span class="new float_left">319</span>
+									<span class="qi float_left">起</span>
+								</div>
+								<div class="reserve_info">最新预定：1小时前</div>
+							</div>
+						</li>
+						<li class="con4_li clearfix">
+							<a class="float_left margin_right" href="..">
+								<img src="../img/right-con5.jpg" />
+							</a>
+							<div class="li_middle float_left">
+								<div class="hotle clearfix">
+									<span class="hotle_ico3 ico3 float_left"></span>
+									<a class="hotle_name float_left" href="..">上海虹桥元-希尔顿酒店</a>
+									<span class="star_4 ico3 float_left"></span>
+								</div>
+								<div class="position_box">
+									<a class="hotle_pos" href="..">虹桥地区</a>
+								</div>
+								<div class="hotle_info">
+									4.6分<span class="ico3 info_ico"></span>来自5630人点评
+								</div> 
+								<div class="comment_box">
+									<a class="hotle_comment" href="..">
+										“房间舒服，餐点也好吃！算是非常好的选择”
+									</a>
+								</div>
+							</div>
+							<div class="li_right float_right">
+								<div class="value clearfix">
+									<span class="other float_left">¥</span>
+									<span class="new float_left">1422</span>
+									<span class="qi float_left">起</span>
+								</div>
+								<div class="reserve_info">最新预定：1小时前</div>
+							</div>
+						</li>
+						<li class="con4_li clearfix">
+							<a class="float_left margin_right" href="..">
+								<img src="../img/right-con6.jpg" />
+							</a>
+							<div class="li_middle float_left">
+								<div class="hotle clearfix">
+									<span class="hotle_ico2 ico3 float_left"></span>
+									<a class="hotle_name float_left" href="..">上海大厦</a>
+									<span class="star_5 ico3 float_left"></span>
+								</div>
+								<div class="position_box">
+									<a class="hotle_pos" href="..">外滩地区</a>
+									<a class="hotle_pos" href="..">四川北路商业区</a>
+								</div>
+								<div class="hotle_info">
+									4.5分<span class="ico3 info_ico"></span>来自4684人点评
+								</div> 
+								<div class="comment_box">
+									<a class="hotle_comment" href="..">
+										“老酒店了，位置优越！不错！”
+									</a>
+								</div>
+							</div>
+							<div class="li_right float_right">
+								<div class="value clearfix">
+									<span class="other float_left">¥</span>
+									<span class="new float_left">778</span>
+									<span class="qi float_left">起</span>
+								</div>
+								<div class="reserve_info">最新预定：1小时前</div>
+							</div>
+						</li>
+						<li class="con4_li clearfix">
+							<a class="float_left margin_right" href="..">
+								<img src="../img/right-con7.jpg" />
+							</a>
+							<div class="li_middle float_left">
+								<div class="hotle clearfix">
+									<span class="hotle_ico1 ico3 float_left"></span>
+									<a class="hotle_name float_left" href="..">和颐酒店(上海迪士尼大道)</a>
+									<span class="star_4 ico3 float_left"></span>
+								</div>
+								<div class="position_box">
+									<a class="hotle_pos" href="..">周浦及康桥工业园区</a>
+									<a class="hotle_pos" href="..">浦东新国际展览中心</a>
+								</div>
+								<div class="hotle_info">
+									4.8分<span class="ico3 info_ico"></span>来自295人点评
+								</div> 
+								<div class="comment_box">
+									<a class="hotle_comment" href="..">
+										“性价比较高，价格合适，前台，保安都很热情。是最近出差入住的最满意的酒店了。赞一个。”
+									</a>
+								</div>
+							</div>
+							<div class="li_right float_right">
+								<div class="value clearfix">
+									<span class="other float_left">¥</span>
+									<span class="new float_left">189</span>
+									<span class="qi float_left">起</span>
+								</div>
+								<div class="reserve_info">最新预定：1小时前</div>
+							</div>
+						</li>
+						<li class="con4_li clearfix">
+							<a class="float_left margin_right" href="..">
+								<img src="../img/right-con8.jpg" />
+							</a>
+							<div class="li_middle float_left">
+								<div class="hotle clearfix">
+									<span class="hotle_ico2 ico3 float_left"></span>
+									<a class="hotle_name float_left" href="..">上海浦东香格里拉大酒店</a>
+									<span class="star_5 ico3 float_left"></span>
+								</div>
+								<div class="position_box">
+									<a class="hotle_pos" href="..">浦东陆家嘴金融贸易区</a>
+									<a class="hotle_pos" href="..">浦东新区</a>
+								</div>
+								<div class="hotle_info">
+									4.8分<span class="ico3 info_ico"></span>来自5667人点评
+								</div> 
+								<div class="comment_box">
+									<a class="hotle_comment" href="..">
+										“舒服，卫生，方便，一直很喜欢住这家酒店”
+									</a>
+								</div>
+							</div>
+							<div class="li_right float_right">
+								<div class="value clearfix">
+									<span class="other float_left">¥</span>
+									<span class="new float_left">2415</span>
+									<span class="qi float_left">起</span>
+								</div>
+								<div class="reserve_info">最新预定：1小时前</div>
+							</div>
+						</li>
+						<li class="con4_li noborder clearfix">
+							<a class="float_left margin_right" href="..">
+								<img src="../img/right-con9.jpg" />
+							</a>
+							<div class="li_middle float_left">
+								<div class="hotle clearfix">
+									<span class="hotle_ico3 ico3 float_left"></span>
+									<a class="hotle_name float_left" href="..">上海西郊宾馆</a>
+									<span class="star_5 ico3 float_left"></span>
+								</div>
+								<div class="position_box">
+									<a class="hotle_pos" href="..">虹桥地区</a>
+									<a class="hotle_pos" href="..">长宁区</a>
+								</div>
+								<div class="hotle_info">
+									4.8分<span class="ico3 info_ico"></span>来自3324人点评
+								</div> 
+								<div class="comment_box">
+									<a class="hotle_comment" href="..">
+										“非常值得推荐的一家宾馆，不愧是国宾馆，犹如一个大公园，植被茂密，空气清新，偌大的湖里天鹅、鸭子自在畅游，生态环境极佳，是休闲的好地方。”
+									</a>
+								</div>
+							</div>
+							<div class="li_right float_right">
+								<div class="value clearfix">
+									<span class="other float_left">¥</span>
+									<span class="new float_left">1400</span>
+									<span class="qi float_left">起</span>
+								</div>
+								<div class="reserve_info">最新预定：1小时前</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="right_con5">
+					<div class="con2_top clearfix">
+						<h3 class="con2_tilte float_left">更多优惠酒店集团</h3>
+						<a class="nav_right float_right" href="..">更多></a>
+					</div>
+					<div class="hotle_more clearfix">
+						<a class="turn_left float_left" href=".."></a>
+						<div class="con5_middle float_left">
+							<a class="hotle_grop float_left" href=".."><span class="bgy_ico ico3"></span>碧桂园</a>
+							<a class="hotle_grop float_left" href=".."><span class="jl_ico ico3"></span>君澜</a>
+							<a class="hotle_grop float_left" href=".."><span class="wj_ico ico3"></span>港中旅维景</a>
+							<a class="hotle_grop float_left" href=".."><span class="shux_ico ico3"></span>书香连锁酒店</a>
+							<a class="hotle_grop float_left" href=".."><span class="yh_ico ico3"></span>粤海</a>
+							<a class="hotle_grop float_left" href=".."><span class="jj_ico ico3"></span>锦江酒店</a>
+							<a class="hotle_grop nomargin float_left" href=".."><span class="yt_ico ico3"></span>御庭</a>
+						</div>
+						<a class="turn_right float_right" href=".."></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer id="foot" class="width_center">
+			<div class="foot_save clearfix">
+				<div class="save_box1 float_left">
+					<div class="fw_box float_left">
+						<div class="save_ico fw_ico ico3 float_left"></div>
+						<div class="save_title margin_right float_left">放心的服务</div>
+					</div>
+					<div class="word_box float_left">
+						<a class="save_word" herf="..">200多个国家60多万家酒店</a>
+						<a class="save_word" herf="..">3000万真实住客的点评参考</a>
+					</div>
+					<div class="word_box float_left">
+						<a class="save_word" herf="..">携程原因变更订单，首晚房费赔付承诺></a>
+						<a class="save_word" herf="..">到店无房，首晚房费赔付承诺></a>
+					</div>
+					<div class="word_box nomargin float_left">
+						<a class="save_word" herf="..">App/网站/电话全方位服务</a>
+						<a class="save_word" herf="..">预定专家7×24小时服务</a>
+					</div>
+				</div>
+				<div class="save_box2 float_left">
+					<div class="fw_box float_left">
+						<div class="save_ico jg_ico ico3 float_left"></div>
+						<div class="save_title margin_right float_left">放心的价格</div>
+					</div>
+					<div class="word_box nomargin float_left">
+						<a class="save_word" herf="..">极具竞争力的全球酒店价格</a>
+						<a class="save_word" herf="..">价格真实可订，无附加服务费</a>
+					</div>
+				</div>
+			</div>
+			<div class="foot_ad clearfix">
+				<a class="float_left" href="..">
+					<img src="../img/ad-foot.jpg" />	
+				</a>
+				<a class="float_right" href="..">
+					<img src="../img/ad-foot1.jpg" />
+				</a>
+			</div>
+			<div class="foot_link">
+				<dl class="link_info">
+					<dt class="info_title">携程酒店官网提供酒店预订及价格查询</dt>
+					<dd class="info">携程酒店官网为您提供国内1300多个城市酒店预订及价格查询，包括全球200多个国家，5万个城市的酒店预订服务，国内外超过20万家的酒店、宾馆、旅社、客栈、经济连锁、酒店公寓、青年旅社等住宿信息，覆盖酒店图片、房间照片、酒店电话、酒店地址以及真实用户的酒店点评等。网上预订携程神秘特价酒店，还可以体验不可思议的低价惊喜。<a href="..">查看全部</a></dd>
+				</dl>
+				<dl class="link_dl clearfix">
+					<dt class="link_dt float_left">酒店预订</dt>
+					<dd class="link_dd float_left">
+						<a class="link_word float_left" href="..">城市酒店</a>
+						<a class="link_word float_left" href="..">国家酒店</a>
+						<a class="link_word float_left" href="..">北京酒店</a>
+						<a class="link_word float_left" href="..">上海酒店</a>
+						<a class="link_word float_left" href="..">广州酒店</a>
+						<a class="link_word float_left" href="..">成都酒店</a>
+						<a class="link_word float_left" href="..">杭州酒店</a>
+						<a class="link_word float_left" href="..">西安酒店</a>
+						<a class="link_word float_left" href="..">新加坡酒店</a>
+						<a class="link_word float_left" href="..">迪拜酒店</a>
+						<a class="link_word float_left" href="..">泰国酒店</a>
+						<a class="link_word float_left" href="..">韩国酒店</a>
+					</dd>
+				</dl>
+				<dl class="link_dl clearfix">
+					<dt class="link_dt float_left">酒店预订</dt>
+					<dd class="link_dd float_left">
+						<a class="link_word float_left" href="..">城市酒店</a>
+						<a class="link_word float_left" href="..">国家酒店</a>
+						<a class="link_word float_left" href="..">北京酒店</a>
+						<a class="link_word float_left" href="..">上海酒店</a>
+						<a class="link_word float_left" href="..">广州酒店</a>
+						<a class="link_word float_left" href="..">成都酒店</a>
+						<a class="link_word float_left" href="..">杭州酒店</a>
+						<a class="link_word float_left" href="..">西安酒店</a>
+						<a class="link_word float_left" href="..">新加坡酒店</a>
+						<a class="link_word float_left" href="..">迪拜酒店</a>
+						<a class="link_word float_left" href="..">泰国酒店</a>
+						<a class="link_word float_left" href="..">韩国酒店</a>
+					</dd>
+				</dl>
+				<dl class="link_dl clearfix">
+					<dt class="link_dt float_left">酒店预订</dt>
+					<dd class="link_dd float_left">
+						<a class="link_word float_left" href="..">城市酒店</a>
+						<a class="link_word float_left" href="..">国家酒店</a>
+						<a class="link_word float_left" href="..">北京酒店</a>
+						<a class="link_word float_left" href="..">上海酒店</a>
+						<a class="link_word float_left" href="..">广州酒店</a>
+						<a class="link_word float_left" href="..">成都酒店</a>
+						<a class="link_word float_left" href="..">杭州酒店</a>
+						<a class="link_word float_left" href="..">西安酒店</a>
+						<a class="link_word float_left" href="..">新加坡酒店</a>
+						<a class="link_word float_left" href="..">迪拜酒店</a>
+						<a class="link_word float_left" href="..">泰国酒店</a>
+						<a class="link_word float_left" href="..">韩国酒店</a>
+					</dd>
+				</dl>
+				<dl class="link_dl clearfix">
+					<dt class="link_dt float_left">酒店预订</dt>
+					<dd class="link_dd float_left">
+						<a class="link_word float_left" href="..">城市酒店</a>
+						<a class="link_word float_left" href="..">国家酒店</a>
+						<a class="link_word float_left" href="..">北京酒店</a>
+						<a class="link_word float_left" href="..">上海酒店</a>
+						<a class="link_word float_left" href="..">广州酒店</a>
+						<a class="link_word float_left" href="..">成都酒店</a>
+						<a class="link_word float_left" href="..">杭州酒店</a>
+						<a class="link_word float_left" href="..">西安酒店</a>
+						<a class="link_word float_left" href="..">新加坡酒店</a>
+						<a class="link_word float_left" href="..">迪拜酒店</a>
+						<a class="link_word float_left" href="..">泰国酒店</a>
+						<a class="link_word float_left" href="..">韩国酒店</a>
+					</dd>
+				</dl>
+				<dl class="link_dl clearfix">
+					<dt class="link_dt float_left">酒店预订</dt>
+					<dd class="link_dd float_left">
+						<a class="link_word float_left" href="..">城市酒店</a>
+						<a class="link_word float_left" href="..">国家酒店</a>
+						<a class="link_word float_left" href="..">北京酒店</a>
+						<a class="link_word float_left" href="..">上海酒店</a>
+						<a class="link_word float_left" href="..">广州酒店</a>
+						<a class="link_word float_left" href="..">成都酒店</a>
+						<a class="link_word float_left" href="..">杭州酒店</a>
+						<a class="link_word float_left" href="..">西安酒店</a>
+						<a class="link_word float_left" href="..">新加坡酒店</a>
+						<a class="link_word float_left" href="..">迪拜酒店</a>
+						<a class="link_word float_left" href="..">泰国酒店</a>
+						<a class="link_word float_left" href="..">韩国酒店</a>
+					</dd>
+				</dl>
+				<dl class="link_dl noborder clearfix">
+					<dt class="link_dt float_left">酒店预订</dt>
+					<dd class="link_dd float_left">
+						<a class="link_word float_left" href="..">城市酒店</a>
+						<a class="link_word float_left" href="..">国家酒店</a>
+						<a class="link_word float_left" href="..">北京酒店</a>
+						<a class="link_word float_left" href="..">上海酒店</a>
+						<a class="link_word float_left" href="..">广州酒店</a>
+						<a class="link_word float_left" href="..">成都酒店</a>
+						<a class="link_word float_left" href="..">杭州酒店</a>
+						<a class="link_word float_left" href="..">西安酒店</a>
+						<a class="link_word float_left" href="..">新加坡酒店</a>
+						<a class="link_word float_left" href="..">迪拜酒店</a>
+						<a class="link_word float_left" href="..">泰国酒店</a>
+						<a class="link_word float_left" href="..">韩国酒店</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="cop_box clearfix">
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">中小企业差旅</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link nobg float_left" href="..">网站导航</a>
+			</div>
+			<div class="copyright clearfix">
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<a class="cop_link float_left" href="..">中小企业</a>
+				<a class="cop_link float_left" href="..">网站导航</a>
+				<span class="cop_link nobg float_left">Copyright © 1999 - 2015 ctirp.com. All Rights Reserved.|ICP证：沪B2-20050130</span>
+			</div>
+			<div class="about clearfix">
+				<a class="about_1 ico2 float_left margin_right" href="..">信用评级</a>
+				<a class="about_2 ico2 float_left margin_right" href="..">上海工商</a>
+				<a class="about_3 ico2 float_left margin_right" href="..">诚信网站</a>
+				<a class="about_4 ico2 float_left margin_right" href="..">网络社会征信网</a>
+				<a class="about_5 ico2 float_left margin_right" href="..">上海市互联网违法与违规信息举报中心</a>
+				<a class="about_6 ico2 float_left margin_right" href="..">可信网站身份查询</a>
+				<a class="about_7 ico2 float_left margin_right" href="..">违法和不良信息举报中心</a>
+				<a class="about_9 ico2 float_left" href="..">沪公网备 310105100005011</a>
+			</div>
+		</footer>
+		<div class="fixed_left_box">
+			<a class="fixed_left" href=".."></a>
+		</div>
+		<div class="fixed_sub">
+			<a class="fixed_1" href=".."></a>
+			<a class="fixed_2 ico2" href=".."></a>
+		</div>
+	</body>
+</html>

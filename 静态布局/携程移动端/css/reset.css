@@ -1,0 +1,17 @@
+body{
+	margin:0;
+}
+input {
+	padding:0;
+	-webkit-appearance:none;/*去除input默认样式*/
+}
+a{
+	-webkit-tap-highlight-color:transparent;
+	text-decoration: none;
+	color: #333;
+}
+ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
