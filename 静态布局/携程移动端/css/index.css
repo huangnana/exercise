@@ -427,6 +427,9 @@ img{
 	width:5rem;
 	border-right:0.015625rem solid #e1e1e1;
 }
+.bottom_ul{
+	width:4.8rem;
+}
 .activity .bottom span{
 	display: block;
 }
@@ -531,7 +534,7 @@ img{
 }
 ul li{
 	width:10rem;
-	height:1.875rem;
+	/*height:1.875rem;*/
 	float: left;
 }
 @keyframes move{

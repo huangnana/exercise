@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="../CSS/WX.css" />
+		<link rel="stylesheet" href="../CSS/smohan.face.css" />
 	</head>
 	<body>
 		<section id="page">
@@ -35,7 +36,9 @@
 					    		<img v-bind:src="item.photo"/>
 					    		<div class = "friend">
 					    			<div class="name">{{item.name}}</div>
-				    				<div class="info">{{item.massage[item.massage.length-1]}}</div>
+				    				<div class="info" v-html="item.massage[item.massage.length-1]">
+				    					{{item.massage[item.massage.length-1]}}
+				    				</div>
 					    		</div>
 			    			</li>
 						</ul>
@@ -79,21 +82,23 @@
 									@contextmenu="massageDialog(index)"
 								>
 									<img src="../img/user.png" alt="" />
-									<span>{{item}}<i></i></span>
+									<span v-html="item">{{item}}<i></i></span>
 								</li>
 							</ul>
 						</div>
-						<div class="show_text">
+						<div id="textBox" class="show_text">
 							<div class="tool">
-								<a href="javaScript:;" @click="faceDialog"></a>
+								<a href="javaScript:;" class="face" ></a>
 								<span >
 									<input type="file">
 								</span>
 								<a href="javaScript:;"></a>
 								<a href="javaScript:;"></a>
 							</div>
-							<textarea class="text" v-model="textValue" @keyup.13="sendText"></textarea>
-							<a class="send" href="javaScript:;" @click="sendText">发送（S）</a>
+							<textarea id="textArea" class="text" v-model="textValue" @keyup.13="sendText"></textarea>
+							<div class="sendBox">
+								<div class="send"  @click="sendText">发送（S）</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -104,11 +109,10 @@
 				<a href="javaScript:;" class="close">×</a>
 			</div>
 		</section>
-		<script src="../JS/template-native.js"></script>
 		<script src="../JS/jquery-3.1.1.js"></script>
+		<script src="../JS/smohan.face.js"></script>
 		<script src="../JS/vue.js"></script>
 		<script src="../JS/WX_data.js"></script>
-		<script src="../JS/WX_rande.js"></script>
 		<script src="../JS/WX_plug.js"></script>
 		<script src="../JS/index.js"></script>
 	</body>

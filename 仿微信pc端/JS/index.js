@@ -48,7 +48,8 @@
 			list:data,
 			isSelected:{},
 			seekValue:"",
-			textValue:""
+			textValue:"",
+			massagediv:null
 		},
 		watch:{  // Vue提供监测数据变化的方法
 			list:{ //要检测的数据呢
@@ -147,19 +148,20 @@
 				}
 			},
 			sendText:function(ev){ // 点击发送 输入框中的内容添加到消息列表中
-				if(!this.textValue.trim()){
+				if(!$('.text').val().trim()){
 					$.dialog([    //弹窗
 						{
 							title:"不能发送空白消息"
 						}
 					])
-					$(".show_text").append($(".tanBox"))
-					$(".tanBox").css("top","68px")
-					$(".tanBox").css("left","400px")
+					$(".sendBox").append($(".tanBox"))
+					$(".tanBox").css("top","-45px")
+					$(".tanBox").css("left","-85px")
 					ev.stopPropagation();
 					return
 				}
-				this.isSelected.massage.push(this.textValue);
+				replaceface($('.text').val());
+				this.isSelected.massage.push(replaceface($('.text').val()));
 				this.textValue="";
 				scroll($(".show_talk"),$(".talk_info"));
 			},
@@ -176,18 +178,6 @@
 			deleMassage:function(index){ // 删除某条消息
 				this.isSelected.massage.splice(index,1);
 				scroll($(".show_talk"),$(".talk_info"));
-			},
-			faceDialog:function(ev){  // 弹出表情列表
-				$.dialog([    //弹窗
-					{
-						title:rander.faceList(WXdata.face),
-						todo:function(){  // 弹窗里面点击每个img 把表情添加到输入框的内容中
-							var $target = $(event.target).closest("img");
-							
-						}
-					}
-				])
-				ev.stopPropagation();
 			}
 		},
 		computed:{  //计算属性  
@@ -211,7 +201,11 @@
 			}
 		}
 	})
-	$(".user").html(rander.userPhoto(vm.isUser.photo)); // 用户头像
+	function userPhoto(photo){
+		var str = "<img src="+photo+"/>";
+		return str;
+	}
+	$(".user").html(userPhoto(vm.isUser.photo)); // 用户头像
 	$(".user").on("click",function(ev){
 		$.dialog([    //弹窗
 			{
@@ -231,6 +225,17 @@
 		])
 		ev.stopPropagation();
 	})
+	$(function (ev){
+		$(".face").smohanfacebox({
+	
+			Event : "click",	//触发事件	
+	
+			divid : "textBox", //外层DIV ID
+	
+			textid : "textArea" //文本框 ID
+	
+		});
+	});
 	scroll($(".show_talk"),$(".talk_info"));
 // 输入框实现按Eenter键不换行，ctrl+enter键换行操作
 	$(".text").on("keyup",function(){
@@ -275,7 +280,6 @@
 		$(".talk_list li").removeClass("hover");
 		$target.addClass("hover");
 	})
-
 //.........................................窗口变化.......................................
 //各个方向拉伸改变page窗口大小
 	var dir = "";

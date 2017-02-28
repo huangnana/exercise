@@ -64,11 +64,6 @@ var WXdata = {
 			photo:"../img/photo4.png",
 			massage:[]
 		}
-	],
-	face:[
-		"../img/face1.png",
-		"../img/face2.png",
-		"../img/face3.png",
 	]
 }
 
