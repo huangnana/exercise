@@ -1,15 +1,18 @@
 body {
   width: 100%;
-  /*overflow:hidden;*/
+  overflow:hidden;
 }
 .page {
   width: 100%;
   height: 100%;
   position: absolute;
-  font-size: 3.125rem;
+  font-size: 100px;
   text-align: center;
 }
-.page1 {
+.hidden{
+	display: none;
+}
+.page1-1 {
   background-color: #083846;
 }
 .page2-1,
@@ -24,24 +27,24 @@ body {
 .page4-2 {
   background-color: #FFBF50;
 }
-.page5 {
+.page5-1 {
   background-color: #083846;
 }
 .wrap {
-  height: 17.75rem;
+  height: 500px;
 }
 .page-current {
   z-index: 1;
 }
-.page1 .img1 {
+.page1-1 .img1 {
   width: 7.75rem;
   height: auto;
   position: absolute;
   left: 50%;
-  top: 0.25rem;
+  top: 1%;
   margin-left: -3.875rem;
 }
-.page1 .img2 {
+.page1-1 .img2 {
   width: 5.78125rem;
   height: auto;
   position: absolute;
@@ -49,7 +52,7 @@ body {
   top: 62%;
   margin-left: -2.875rem;
 }
-.page1 .img3 {
+.page1-1 .img3 {
   width: 0.78125rem;
   height: auto;
   position: absolute;
@@ -62,8 +65,9 @@ body {
   height: auto;
   position: absolute;
   left: 50%;
-  top: 4%;
+  top: 2%;
   margin-left: -2.46875rem;
+  z-index:2;
 }
 .page2-1 .img2 {
   width: 7.5rem;
@@ -96,6 +100,7 @@ body {
   left: 50%;
   top: 82%;
   margin-left: -2.21875rem;
+  z-index: 2;
 }
 .page .img6 {
   width: 0.78125rem;
@@ -118,7 +123,7 @@ body {
   height: auto;
   position: absolute;
   left: 50%;
-  top: 5%;
+  top: 7%;
   margin-left: -4.5625rem;
 }
 .page2-2 .img2 {
@@ -142,8 +147,9 @@ body {
   width: 5.1875rem;
   position: absolute;
   left: 50%;
-  top: 4%;
+  top: 2%;
   margin-left: -2.6875rem;
+  z-index:2;
 }
 .page3-1 .img2 {
   height: auto;
@@ -214,8 +220,9 @@ body {
   width: 5.0625rem;
   position: absolute;
   left: 50%;
-  top: 4%;
+  top: 2%;
   margin-left: -2.625rem;
+  z-index:2;
 }
 .page4-1 .img2 {
   height: auto;
@@ -270,7 +277,7 @@ body {
   width: 9.3125rem;
   position: absolute;
   left: 50%;
-  top: 5%;
+  top: 7%;
   margin-left: -4.65625rem;
 }
 .page4-2 .img2 {
@@ -289,19 +296,19 @@ body {
   top: 87%;
   margin-left: -0.3125rem;
 }
-.page5 .img1 {
+.page5-1 .img1 {
   height: auto;
   width: 8.75rem;
   position: absolute;
   left: 50%;
-  top: 20%;
+  top: 18%;
   margin-left: -4.375rem;
 }
-.page5 .img2 {
+.page5-1 .img2 {
   height: auto;
   width: 8.125rem;
   position: absolute;
   left: 50%;
-  top: 67%;
+  top: 70%;
   margin-left: -4.0625rem;
 }
