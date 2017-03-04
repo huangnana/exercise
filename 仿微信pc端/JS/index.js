@@ -234,7 +234,7 @@
 	
 			textid : "textArea" //文本框 ID
 	
-		});
+		})
 	});
 	scroll($(".show_talk"),$(".talk_info"));
 // 输入框实现按Eenter键不换行，ctrl+enter键换行操作
