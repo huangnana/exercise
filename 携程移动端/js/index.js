@@ -21,6 +21,13 @@
 			$("#head").css("background-color",null)
 		}
 	})
+	xqScroll.on("scrollEnd",function(){
+		if($("#wrap").offset().top<-30){
+			$("#head").css("background-color","#f3f8fe")
+		}else{
+			$("#head").css("background-color",null)
+		}
+	})
 	//图片自动切换
 	var num = 0;
 	var w = $(".con_ad li").width();
@@ -46,7 +53,7 @@
 				}
 				$(".turn").removeClass("active").eq(num).addClass("active");
 			},500)
-			
 		},2500)
 	}
+	
 })()
