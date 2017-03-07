@@ -73,10 +73,10 @@ img{
 	margin:0.8125rem 0.3125rem 0 0;
 }
 #content{
-	height: 90%;
+	height: 12.75rem;
 	background:#f3f3f3;
-	margin-top:1.875rem;
-	margin-bottom:1.5625rem;
+	/*margin-top:1.875rem;
+	margin-bottom:1.5625rem;*/
 	overflow: hidden;
 }
 #wrap{
